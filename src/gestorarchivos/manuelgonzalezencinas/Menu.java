@@ -7,6 +7,12 @@ public class Menu {
     //Listar tareas
     //Eliminar tareas
     
+    public static String pedirNombre(Scanner teclado){
+        System.out.println("introduzca el nombre de la tarea");
+        String nombre=teclado.nextLine();
+        return nombre;
+    }
+    
     public static void main(String[]args){
         
         GestorTareas g=new GestorTareas();
@@ -25,18 +31,15 @@ public class Menu {
                                5-Salir
                                """);
             switch(teclado.nextInt()){
-                case 1->{System.out.println(g.crearTarea(pedirNombre(teclado)));}
-                case 2->{System.out.println(g.completarTarea(pedirNombre(teclado)));}
-                case 3->{System.out.println(g.verTareas());}
-                case 4->{System.out.println(g.eliminarTarea(pedirNombre(teclado)));}
-                case 5->{salir=true;}
+                case 1->{teclado.nextLine();System.out.println(g.crearTarea(pedirNombre(teclado)));}
+                case 2->{teclado.nextLine();System.out.println(g.completarTarea(pedirNombre(teclado)));}
+                case 3->{teclado.nextLine();System.out.println(g.verTareas());}
+                case 4->{teclado.nextLine();System.out.println(g.eliminarTarea(pedirNombre(teclado)));}
+                case 5->{teclado.nextLine();salir=true;}
             }
         }
         
         
     }
-    public static String pedirNombre(Scanner teclado){
-        System.out.println("introduzca el nombre de la tarea");
-        return teclado.nextLine();
-    }
+    
 }
