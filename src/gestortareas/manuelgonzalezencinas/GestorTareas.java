@@ -35,5 +35,6 @@ public class GestorTareas {
         }
         return "Tarea "+nombre+" eliminada";
     }
+    public List<Tarea> getTareas(){return tareas;}
     
 }

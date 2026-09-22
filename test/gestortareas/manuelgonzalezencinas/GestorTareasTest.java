@@ -37,12 +37,41 @@ public class GestorTareasTest {
     }
 
     @Test
-    public void testRegistrar(){}
+    public void testRegistrar(){
+        GestorTareas g=new GestorTareas();
+        Menu m=new Menu();
+        g.crearTarea("prueba");
+        assertEquals(new Tarea("prueba"),g.getTareas().get(0));
+    }
     @Test
-    public void testCompletar(){}
+    public void testCompletar(){
+        GestorTareas g=new GestorTareas();
+        Menu m=new Menu();
+        g.crearTarea("prueba");
+        g.completarTarea("prueba");
+        assertEquals(true,g.getTareas().get(0).getCompletada());
+    }
     @Test
-    public void testListar(){}
+    public void testListar(){
+        GestorTareas g=new GestorTareas();
+        Menu m=new Menu();
+        g.crearTarea("prueba");
+        g.crearTarea("prueba2");
+        assertEquals(
+                """
+                Tarea : prueba | Completada : no
+                Tarea : prueba2 | Completada : no
+                """,
+                g.verTareas()
+        );
+    }
     @Test
-    public void testEliminar(){}
+    public void testEliminar(){
+        GestorTareas g=new GestorTareas();
+        Menu m=new Menu();
+        g.crearTarea("prueba");
+        g.eliminarTarea("prueba");
+        assertEquals(null,g.getTareas().get(0));
+    }
     
 }
