@@ -27,11 +27,15 @@ public class Menu {
         
         switch(teclado.nextInt()){
             
-            case 1->{}
-            case 2->{}
-            case 3->{}
-            case 4->{}
+            case 1->{System.out.println(g.crearTarea(pedirNombre(teclado)));}
+            case 2->{System.out.println(g.completarTarea(pedirNombre(teclado)));}
+            case 3->{System.out.println(g.verTareas());}
+            case 4->{System.out.println(g.eliminarTarea(pedirNombre(teclado)));}
             
         }
+    }
+    public static String pedirNombre(Scanner teclado){
+        System.out.println("introduzca un nombre");
+        return teclado.nextLine();
     }
 }
