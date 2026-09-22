@@ -1,17 +1,39 @@
 package gestorarchivos.manuelgonzalezencinas;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class GestorTareas {
-    GestorTareas(){}
+    private List<Tarea>tareas;
+    GestorTareas(){
+        this.tareas=new ArrayList<>();
+    }
     public String crearTarea(String nombre){
-        return "a";
+        tareas.add(new Tarea(nombre));
+        return "Tarea "+nombre+" añadida";
     }
     public String completarTarea(String nombre){
-        return "a";
+        for(int i=0;i<tareas.size();i++){
+            if(tareas.get(i).getNombre().equals(nombre)){
+                tareas.get(i).setCompletada(true);
+            }
+        }
+        return "Tarea "+nombre+" marcada como completada";
     }
     public String verTareas(){
-        return "a";
+        String lista="";
+        for(int i=0;i<tareas.size();i++){
+            lista=lista+tareas.get(i).toString();
+        }
+        return lista;
     }
     public String eliminarTarea(String nombre){
-        return "a";
+        for(int i=0;i<tareas.size();i++){
+            if(tareas.get(i).getNombre().equals(nombre)){
+                tareas.remove(i);
+            }
+        }
+        return "Tarea "+nombre+" eliminada";
     }
     
 }

@@ -35,7 +35,7 @@ public class Menu {
         }
     }
     public static String pedirNombre(Scanner teclado){
-        System.out.println("introduzca un nombre");
+        System.out.println("introduzca el nombre de la tarea");
         return teclado.nextLine();
     }
 }

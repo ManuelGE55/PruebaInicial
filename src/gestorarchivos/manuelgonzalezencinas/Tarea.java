@@ -9,4 +9,11 @@ public class Tarea {
     public void setCompletada(boolean b){this.completada=b;}
     public String getNombre(){return nombre;}
     public boolean getCompletada(){return completada;}
+    public String convertidorBAS(boolean b){
+        if(b==true){return "si";}else{return "no";}
+    }
+    @Override
+    public String toString(){
+        return "\n Tarea : "+nombre+" | Completada : "+convertidorBAS(completada);
+    }
 }
