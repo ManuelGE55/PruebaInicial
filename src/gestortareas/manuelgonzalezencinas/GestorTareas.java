@@ -1,4 +1,4 @@
-package gestorarchivos.manuelgonzalezencinas;
+package gestortareas.manuelgonzalezencinas;
 
 import java.util.ArrayList;
 import java.util.List;

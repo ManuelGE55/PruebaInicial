@@ -1,4 +1,4 @@
-package gestorarchivos.manuelgonzalezencinas;
+package gestortareas.manuelgonzalezencinas;
 public class Tarea {
     private String nombre;
     private boolean completada;
