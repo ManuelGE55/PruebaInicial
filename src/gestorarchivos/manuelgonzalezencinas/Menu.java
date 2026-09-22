@@ -22,17 +22,18 @@ public class Menu {
                                2-Marcar tarea como completada
                                3-Ver tareas
                                4-Eliminar tarea
+                               5-Salir
                                """);
+            switch(teclado.nextInt()){
+                case 1->{System.out.println(g.crearTarea(pedirNombre(teclado)));}
+                case 2->{System.out.println(g.completarTarea(pedirNombre(teclado)));}
+                case 3->{System.out.println(g.verTareas());}
+                case 4->{System.out.println(g.eliminarTarea(pedirNombre(teclado)));}
+                case 5->{salir=true;}
+            }
         }
         
-        switch(teclado.nextInt()){
-            
-            case 1->{System.out.println(g.crearTarea(pedirNombre(teclado)));}
-            case 2->{System.out.println(g.completarTarea(pedirNombre(teclado)));}
-            case 3->{System.out.println(g.verTareas());}
-            case 4->{System.out.println(g.eliminarTarea(pedirNombre(teclado)));}
-            
-        }
+        
     }
     public static String pedirNombre(Scanner teclado){
         System.out.println("introduzca el nombre de la tarea");
